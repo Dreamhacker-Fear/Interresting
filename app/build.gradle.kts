@@ -17,8 +17,8 @@ dependencies { implementation("androidx.webkit:webkit:1.12.1") }
 
 tasks.register("prepareKililWeb") {
     doLast {
-        val sourceMenu = file("../../menu.html")
-        val sourceScript = file("../../script.js")
+        val sourceMenu = file("../menu.html").canonicalFile
+        val sourceScript = file("../script.js").canonicalFile
         val assetDir = file("src/main/assets")
         assetDir.mkdirs()
         sourceMenu.copyTo(file("$assetDir/menu.html"), overwrite = true)
