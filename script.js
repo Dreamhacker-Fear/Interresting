@@ -112,7 +112,7 @@
   }
 
   window.Kilil = Object.freeze({
-    version: "safe-demo-1.0.0",
+    version: "safe-demo-1.0.1",
     mode: "offline",
     isConnected: false,
     setSetting,
