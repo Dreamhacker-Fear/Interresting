@@ -58,14 +58,14 @@
       settings: { ...state.settings }
     };
     state.profiles.push(profile);
-    save(STORAGE.proFILES, state.profiles);
+    save(STORAGE.profiles, state.profiles);
     emit("kilil:profiles", state.profiles);
     return profile;
   }
 
   function deleteProfile(id) {
     state.profiles = state.profiles.filter(p => p.id !== String(id));
-    save(STORAGE.proFILES, state.profiles);
+    save(STORAGE.profiles, state.profiles);
     emit("kilil:profiles", state.profiles);
   }
 
